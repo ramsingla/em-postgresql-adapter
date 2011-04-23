@@ -6,13 +6,13 @@ NOTE: This project is unrelated to mperham's em_postgresql <https://github.com/m
 
 ## Installation
 
-1. Edit your Gemfile:
+Edit your Gemfile:
 
-  gem 'pg'
-  gem 'em-postgresql-adapter', :git => 'git://github.com/leftbee/em-postgresql-adapter.git'
-  gem 'rack-fiber_pool',  :require => 'rack/fiber_pool'
+    gem 'pg'
+    gem 'em-postgresql-adapter', :git => 'git://github.com/leftbee/em-postgresql-adapter.git'
+    gem 'rack-fiber_pool',  :require => 'rack/fiber_pool'
 
-2. Edit your environment (i.e., production.rb, staging.rb, etc.) and make sure threadsafe! is enabled:
+Then edit your environment (i.e., production.rb, staging.rb, etc.) and make sure threadsafe! is enabled:
 
     MyRails3App::Application.configure do
       ...
@@ -20,7 +20,7 @@ NOTE: This project is unrelated to mperham's em_postgresql <https://github.com/m
       ...
     end
 
-3. Finally, edit your config/database.yml:
+And finally, edit your config/database.yml:
 
     production:
       adapter: em_postgresql
