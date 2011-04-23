@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors  = ["Ruben Nine"]
   s.files    = [
     "em-postgresql-adapter.gemspec",
-    "README",
+    "README.md",
     "lib/active_record/connection_adapters/em_postgresql_adapter.rb",
     "lib/fibered_postgresql_connection.rb"
   ]
