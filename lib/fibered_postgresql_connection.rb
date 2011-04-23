@@ -31,8 +31,6 @@ module EM
         end
       end
 
-      # Assuming the use of EM fiber extensions and that the exec is run in
-      # the context of a fiber. One that have the value :neverblock set to true.
       def exec(sql)
         if ::EM.reactor_running?
           send_query sql
