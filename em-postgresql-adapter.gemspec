@@ -5,7 +5,6 @@ Gem::Specification.new do |s|
   s.summary  = "PostgreSQL fiber-based ActiveRecord connection adapter for Ruby 1.9"
   s.email    = "ruben@leftbee.net"
   s.homepage = "http://github.com/leftbee/em-postgresql-adapter"
-  s.has_rdoc = false
   s.authors  = ["Ruben Nine"]
   s.files    = [
     "em-postgresql-adapter.gemspec",
