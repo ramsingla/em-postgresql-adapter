@@ -1,4 +1,3 @@
-# Require original mysql adapter as we'll just extend it
 require 'active_record/connection_adapters/postgresql_adapter'
 require 'fibered_postgresql_connection'
 
@@ -100,30 +99,6 @@ module ActiveRecord
         c.verify!
         c
       end
-
-      #   def checkout
-      #     # Checkout an available connection
-      #     loop do
-      #       conn = if @checked_out.size < @connections.size
-      #                checkout_existing_connection
-      #              elsif @connections.size < @size
-      #                checkout_new_connection
-      #              end
-      #       return conn if conn
-      #       # No connections available; wait for one
-      #       @waiting ||= []
-      #       Fiber.yield @waiting << Fiber.current
-      #     end
-      #   end
-      #
-      #   def checkin(conn)
-      #     conn.run_callbacks :checkin
-      #     @checked_out.delete conn
-      #     if @waiting && @waiting.size > 0
-      #       @waiting.shift.resume
-      #     end
-      #   end
-      # end
     end # ConnectionPool
 
     class EMPostgreSQLAdapter < ActiveRecord::ConnectionAdapters::PostgreSQLAdapter

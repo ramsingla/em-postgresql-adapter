@@ -33,11 +33,7 @@ module EM
 
       # Assuming the use of EM fiber extensions and that the exec is run in
       # the context of a fiber. One that have the value :neverblock set to true.
-      # All neverblock IO classes check this value, setting it to false will force
-      # the execution in a blocking way.
       def exec(sql)
-        # TODO Still not "killing the query process"-proof
-        # In some cases, the query is simply sent but the fiber never yields
         if ::EM.reactor_running?
           send_query sql
           deferrable = ::EM::DefaultDeferrable.new
